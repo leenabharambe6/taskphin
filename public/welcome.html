@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Favorite Movies</title>
+    <style>
+            table {
+                border-collapse: collapse;
+                width: 50%; /* Adjust the width as needed */
+            }
+    
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+    </style>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+    
+    <!-- Table for displaying movies -->
+    <table id="movieTable">
+        <thead>
+            <tr>
+                <th>Movie Name</th>
+                <th>Rating</th>
+                <th>Cast</th>
+                <th>Genre</th>
+                <th>Release Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="movieList">
+            <!-- Movie rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Form for adding/editing movies -->
+    <form id="movieForm" form action="/addNewMovie" method="post">
+        <!-- Input fields for Movie Name, Rating, Cast, Genre, Release Date -->
+            <label for="name">Movie Name:</label>
+            <input type="text" name="name" id="name" required><br><br>
+            
+            <label for="rating">Rating:</label>
+            <input type="text" name="rating" id="rating" required><br><br>
+
+            <label for="cast">Cast:</label>
+            <input type="text" name="cast" id="cast" required><br><br>
+            
+            <label for="genre">Genre:</label>
+            <input type="text" name="genre" id="genre" required><br><br>
+            
+            <label for="release_date">Release Date:</label>
+            <input type="date" name="release_date" id="release_date" required><br><br>
+            
+            <input type="submit" value="Add New Movie">
+    </form>
+    <script src="loadMovies.js"></script>
+</body>
+</html>

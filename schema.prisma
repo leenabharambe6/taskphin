@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://zvscpwoa:SCbNNwMBGGryDTWlCi38za8kzCz8_rTd@rain.db.elephantsql.com/zvscpwoa"
+}
+
+model users {
+  id    Int      @id @default(autoincrement())
+  email String   @unique
+  password  String?
+}
+
+model MovieDetails {
+  id    Int      @unique
+  movieName String 
+}
